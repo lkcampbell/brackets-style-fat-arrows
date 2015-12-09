@@ -1,0 +1,17 @@
+{
+    "name": "brackets-style-fat-arrows",
+    "title": "Style Fat Arrows",
+    "version": "0.1.0",
+    "description": "Change the syntax style color of all Javascript fat arrows from 'operator' to 'keyword'",
+    "homepage": "https://github.com/lkcampbell/brackets-style-fat-arrows",
+    "author": "Lance Campbell (https://github.com/lkcampbell)",
+    "license": "MIT",
+    "categories":"editing",
+    "files": [
+        "main.js",
+        "README.md"
+    ],
+    "engines": {
+        "brackets": ">=1.5.0"
+    }
+}
