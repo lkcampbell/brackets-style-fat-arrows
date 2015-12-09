@@ -43,6 +43,7 @@ define(function (require, exports, module) {
     var fatArrowOverlay = {
         token: function (stream, state) {
             
+            // Match the fat arrows
             if (stream.match("=>") && (!inBlockComment)) {
                 return "keyword";
             }
@@ -79,7 +80,7 @@ define(function (require, exports, module) {
                 return null;
             }
             
-            // Skip fat arrows in unterminated regex expressions...
+            // Skip fat arrows in unterminated regex expressions
             if (stream.match(/\/[^\/]*/)) {
                 return null;
             }
@@ -104,7 +105,7 @@ define(function (require, exports, module) {
             if ((typeof cm.options.mode) === "string") {
                 cmMode = cm.options.mode;
             } else {
-                cmMode = cm.options.mode[name];
+                cmMode = cm.options.mode["name"];
             }
             
             if (JS_MODES.indexOf(cmMode) !== -1) {
