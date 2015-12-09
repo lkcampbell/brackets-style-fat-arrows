@@ -105,12 +105,12 @@ define(function (require, exports, module) {
             if ((typeof cm.options.mode) === "string") {
                 cmMode = cm.options.mode;
             } else {
-                cmMode = cm.options.mode["name"];
+                cmMode = cm.options.mode.name;
             }
             
             if (JS_MODES.indexOf(cmMode) !== -1) {
                 cm.removeOverlay(fatArrowOverlay);
-                cm.addOverlay(fatArrowOverlay);
+                cm.addOverlay(fatArrowOverlay, {opaque: true});
                 cm.refresh();
             }
         }
