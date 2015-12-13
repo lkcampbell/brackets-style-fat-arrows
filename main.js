@@ -94,17 +94,15 @@ define(function (require, exports, module) {
     };
     
     function updateOverlay() {
-        var editor      = EditorManager.getCurrentFullEditor(),
-            cm          = editor ? editor._codeMirror : null,
-            cmMode      = "";
+        var editor  = EditorManager.getCurrentFullEditor(),
+            cm      = editor ? editor._codeMirror : null,
+            cmMode;
         
         if (cm) {
             // Only apply the overlay in a mode that *might* contain Javascript
             cmMode = cm.options.mode;
             
-            if ((typeof cm.options.mode) === "string") {
-                cmMode = cm.options.mode;
-            } else {
+            if ((typeof cmMode) !== "string") {
                 cmMode = cm.options.mode.name;
             }
             
